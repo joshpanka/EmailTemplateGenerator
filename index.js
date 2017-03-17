@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
-const PORT_NUMBER = 3001;
+const PORT_NUMBER = 3000;
 
 app.use('/scripts',
     express.static(path.join(__dirname, '/scripts')));
