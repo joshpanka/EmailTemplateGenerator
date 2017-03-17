@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="templateGenerator">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REMAKE Template Generator</title>
+    <link rel="stylesheet" href="/styles/3rdparty/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/3rdparty/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/3rdparty/fonts.css">
+    <link rel="stylesheet" href="/styles/3rdparty/tinymce.fullscreen.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/edit/toolbar.css">
+    <link rel="stylesheet" href="/styles/edit/preview.css">
+    <base href="/">
+</head>
+<body>
+    <div id="template-body" class="container-fluid">
+        <div ui-view="edit.toolbar"></div>
+        <div ui-view="edit.preview"></div>
+    </div>
+    <script src="/scripts/3rdparty/tinymce/tinymce.min.js"></script>
+    <script src="/scripts/3rdparty/angular.min.js"></script>
+    <script src="/scripts/3rdparty/angular-sanitize.min.js"></script>
+    <script src="/scripts/3rdparty/angular-ui-router.min.js"></script>
+    <script src="/scripts/3rdparty/angular-drag-and-drop-lists.min.js"></script>
+    <script src="/scripts/3rdparty/angular-ui-tinymce/dist/tinymce.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/constants/BlockConstant.js"></script>
+    <script src="/scripts/controllers/PreviewController.js"></script>
+    <script src="/scripts/controllers/ToolbarController.js"></script>
+    <script src="/scripts/services/TextEditService.js"></script>
+    <script src="/scripts/services/PreviewService.js"></script>
+</body>
+</html>

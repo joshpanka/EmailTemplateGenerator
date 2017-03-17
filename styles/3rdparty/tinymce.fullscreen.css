@@ -1,0 +1,30 @@
+
+.mce-tinymce {
+    border-width: 0 !important;
+}
+
+.mce-tinymce, .mce-container-body, #code_ifr {
+    min-height: 100% !important;
+}
+
+.mce-container-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mce-container-body .mce-edit-area {
+    position: absolute;
+    top: 69px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mce-tinymce .mce-statusbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

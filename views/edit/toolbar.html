@@ -1,0 +1,39 @@
+
+<div class="toolbar">
+    <div class="toolbar-selector"
+        ng-if="!toolbar.getTextEditState()">
+        <div class="toolbar-header" ng-click="toolbar.editText()">
+            <div class="toolbar-header-label">Drag blocks to add them:</div>
+        </div>
+        <div class="toolbar-body">
+            <ul class="blocks">
+                <li class="block-type" dnd-draggable="blockType"
+                    ng-repeat="blockType in toolbar.BLOCK_TYPES">
+                    <span class="block-label">{{ blockType.name }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="toolbar-selector"
+        ng-if="toolbar.getTextEditState()">
+        <div class="toolbar-header">
+            <div class="toolbar-header-label">Edit Text:</div>
+            <div class="edit-text-buttons">
+                <button class="btn btn-sm btn-secondary btn_save"
+                    ng-click="toolbar.cancelTextEdit()">
+                    Cancel
+                </button>
+                <button class="btn btn-sm btn-primary btn_save"
+                    ng-click="toolbar.saveTextEdit()">
+                    Save
+                </button>
+            </div>
+        </div>
+        <div class="toolbar-body">
+            <textarea ui-tinymce="{height : '100%', statusbar: false}" class="text-edit-area"
+                    ng-model="toolbar.selectedTextField.currentText">
+                {{ toolbar.selectedTextField.currentText }}
+            </textarea>
+        </div>
+    </div>
+</div>

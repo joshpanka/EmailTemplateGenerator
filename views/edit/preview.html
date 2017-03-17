@@ -1,0 +1,48 @@
+<div id="content">
+    <div class="preview-container">
+        <div class="template-container" dnd-list="preview.blockList"
+            dnd-inserted="preview.blockInserted(index, item, external, type)">
+            <div class="block-item"
+                ng-repeat="blockItem in preview.blockList"
+                dnd-draggable="blockItem"
+                dnd-moved="preview.spliceAndSave($index)"
+                dnd-effect-allowed="move"
+                ng-click="preview.openEditTextView(blockItem, $index)">
+
+                <div ng-if="blockItem.type === 'text'" class="text-item">
+                    <div ng-if="preview.selectedIndex !== blockItem.blockSN|| !preview.getTextEditState()"
+                        ng-bind-html="preview.trustAsHtml(blockItem.text)">
+                    </div>
+                    <div ng-if="preview.selectedIndex === blockItem.blockSN && preview.getTextEditState()"
+                        ng-model="preview.selectedTextField.currentText"
+                        ng-bind-html="preview.trustAsHtml(preview.selectedTextField.currentText)">
+                    </div>
+                </div>
+                <div ng-if="blockItem.type === 'divider'" class="divider-item">
+                    <hr class="page-break">
+                </div>
+                <div ng-if="blockItem.type === 'image'" class="image-item">
+                    <div class="image-content">
+                        <div class="image-placeholder">
+                            {{ blockItem.defaultText }}
+                        </div>
+                    </div>
+                </div>
+                <div class="block-item-controls">
+                    <a class="block-item block-item-edit" title="Edit Block" href="#">
+                        <i class="fa fa-pencil"></i>
+                    </a>
+                    <a class="block-item block-item-trash" title="Delete Block" href="#">
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+                    <a class="block-item block-item-clone" title="Clone Block" href="#">
+                        <i class="fa fa-files-o"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="dndPlaceholder">
+                Insert block here
+            </div>
+        </div>
+    </div>
+</div>

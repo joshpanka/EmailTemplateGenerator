@@ -1,0 +1,10 @@
+#template-body {
+    position: absolute;
+    height: auto;
+    top:  0px;
+    bottom: 00px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    min-width: 1024px;
+}

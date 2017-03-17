@@ -1,0 +1,145 @@
+div#content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 300px;
+    padding: 0;
+    border-left: solid 1px #ccc;
+    box-sizing: border-box;
+    min-width: auto;
+    width: auto;
+    min-height: auto;
+    background-color: #eeeeee;
+    overflow: scroll;
+}
+
+div.preview-container{
+    margin: 0;
+    padding: 50px 20px 20px 20px;
+    border-top: 0;
+}
+
+div.template-container {
+    display: block;
+    width: 600px;
+    border: 0px none #aaaaaa;
+    background-color: #ffffff;
+    border-radius: 0px;
+    margin: 0 auto;
+}
+
+div.block-item {
+    position: relative;
+    padding: 9px 18px;
+    word-wrap: break-word;
+}
+
+div.placeholder-item {
+    display: block;
+    min-height: 5px;
+
+    color: #a3a3a3;
+    text-align: center;
+    font-size: 12px
+}
+
+div.image-item {
+    position: relative;
+    height: 170px;
+    padding: 0 6px;
+}
+
+div.image-item > .image-content {
+    height: 100%;
+    border: solid 1px #ccc;
+}
+
+div.image-item > .image-content > .image-placeholder {
+    position: absolute;
+    border: solid 1px #ccc;
+    padding: 9px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 16px;
+    color: #a3a3a3;
+}
+
+div.divider-item {
+    padding: 9px;
+}
+
+hr.page-break {
+    margin: 0;
+    border-top: 1px solid #ccc;
+}
+
+div.block-item-controls {
+    display: none;
+}
+
+div.block-item > .block-item-controls {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 20;
+}
+
+div.block-item-controls > a.block-item {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 28px;
+    width: 28px;
+    color: #666;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    background: #f9f9f9;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    text-decoration: none;
+    line-height: 1;
+}
+
+div.block-item-controls > a.block-item-edit {
+    left: 5px;
+}
+
+div.block-item-controls > a.block-item-trash {
+    left: 35px;
+}
+
+div.block-item-controls > a.block-item-clone {
+    left: 65px;
+}
+
+
+/**
+ * CSS for various preview interactions
+ */
+
+ div.preview-container div[dnd-list] .dndPlaceholder {
+    background-color: #217dbb;
+    display: block;
+    min-height: 5px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px
+}
+
+div.block-item:hover {
+    border: solid 3px #828282;
+    cursor: pointer;
+}
+
+div.block-item:hover > .block-item-controls{
+    display: block;
+}
+

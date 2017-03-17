@@ -1,0 +1,101 @@
+div.toolbar {
+    position: absolute;
+    top:  0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+    border-right: solid 1px #ccc;
+}
+
+div.toolbar-selector {
+    position: absolute;
+    top:  0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    background: #fff;
+    border-right: solid 1px #ccc;
+}
+
+div.toolbar-header {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-image: linear-gradient(to bottom,#f9f9f9,#f4f4f4);
+    text-align: left;
+    box-sizing: border-box;
+    border-bottom: solid 1px #ccc;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    padding:  7px 10px 7px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #222;
+}
+
+div.toolbar-header-label {
+    position: relative;
+    float: left;
+    top: 5px;
+}
+
+div.edit-text-buttons {
+    float: right;
+}
+
+div.toolbar-body {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    width: 100%;
+}
+
+ul.blocks {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+li.block-type {
+    position: relative;
+    list-style-type: none;
+    float: left;
+    padding: 0 6px;
+    border: solid 2px #ccc;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    cursor: move;
+    width: 48%;
+    height: 118px;
+    box-sizing: border-box;
+    background: #fcfcfc;
+    text-align: center;
+}
+
+li.block-type:nth-child(odd){
+    margin-right: 4%;
+}
+
+span.block-label {
+    display: block;
+    text-align: center;
+    margin-top: 48px;
+    line-height: 1;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+}
+
+/**
+ * CSS behavior when dragging blocks
+ */
+li.block-type.dndDragging {
+    border: solid 2px #217dbb;
+    background: #e8f2f8;
+}
+
+li.block-type.dndDragging > .block-label{
+    color: #134b70;
+}
